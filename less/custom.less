@@ -11,10 +11,17 @@
 @bodyBackground: #000;
 @linkColor: @gsBlue;
 
-@transition-time: 0.2s;
+@transition-time: 0.5s;
 
 @sans-font-family: 'Roboto', 'Helvetica Neue', sans-serif;
 @headings-font-family: 'Oswald', @sans-font-family;
+
+.transition(@trans) {
+  -webkit-transition: @trans;
+  -moz-transition:    @trans;
+  -ms-transition:     @trans;
+  transition:         @trans;
+}
 
 .animation(@anim) {
   -webkit-animation: @anim;

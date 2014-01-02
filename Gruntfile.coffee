@@ -28,7 +28,7 @@ module.exports = (grunt) ->
     copy:
       all:
         files: [{expand: true, src: ['img/*'], dest: 'dist/', filter: 'isFile'},
-                {expand: true, src: ['font/*'], dest: 'dist/', filter: 'isFile'}]
+                {expand: true, src: ['fonts/*'], dest: 'dist/', filter: 'isFile'}]
 
     clean:
       res: ["dist/font", "dist/img"]
@@ -50,7 +50,7 @@ module.exports = (grunt) ->
         files: ['index.html']
         tasks: ['htmlmin:all']
       copy:
-        files: ['font/*', 'img/*']
+        files: ['fonts/*', 'img/*']
         tasks: ['clean:res', 'copy:all']
 
   grunt.loadNpmTasks 'grunt-contrib-less'

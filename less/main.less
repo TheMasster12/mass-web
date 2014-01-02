@@ -3,13 +3,94 @@
  * Author - Andrew Mass
  */
 
+html {
+  position: relative;
+  height: 100%;
+  margin: 0;
+  background-color: @grayDark;
+}
+
 ::-webkit-scrollbar {
   -webkit-appearance: none;
   width: 10px;
+  background-color: @grayDark;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: @grayDark;
+  background-color: @grayLight;
+}
+
+#profile-photo {
+  max-width: 100%;
+  height: 100%;
+  margin-top: 4px;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.container {
+  width: 1600px;
+  height: 800px;
+  margin: 0 auto;
+  background-color: @grayLight;
+
+  table {
+    width: 100%;
+    height: 100%;
+
+    td {
+      position: relative;
+      .transition(all @transition-time);
+      width: 12.5%;
+      height: 25%;
+      background-color: @grayDark;
+
+      &.double {
+        width: 25%;
+        height: 50%;
+
+        a {
+          font-size: 40px;
+
+          .box i {
+            font-size: 250px;
+            margin-bottom: 15px;
+          }
+        }
+      }
+
+      &:hover {
+        background-color: @grayLight;
+        
+        a {
+          color: @grayDark;
+        }
+      }
+
+      a {
+        color: @grayLight;
+        font-family: @headings-font-family;
+        font-size: 20px;
+        text-decoration: none;
+
+        .box {
+          text-align: center;
+
+          i {
+            display: block;
+            font-size: 125px;
+            margin-bottom: 15px;
+          }
+
+          .text-only { 
+            font-size: 50px;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: 480px) {}
