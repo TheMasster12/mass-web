@@ -7,23 +7,24 @@ html {
   position: relative;
   height: 100%;
   margin: 0;
-  background-color: @grayDark;
+  background-color: @gray-dark;
 }
 
 ::-webkit-scrollbar {
   -webkit-appearance: none;
   width: 10px;
-  background-color: @grayDark;
+  background-color: @gray-dark;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: @grayLight;
+  background-color: @gray-light;
 }
 
 #profile-photo {
   max-width: 100%;
   height: 100%;
   margin-top: 4px;
+  margin-left: 1px;
 }
 
 a:hover {
@@ -34,7 +35,7 @@ a:hover {
   width: 1600px;
   height: 800px;
   margin: 0 auto;
-  background-color: @grayLight;
+  background-color: @gray-light;
 
   table {
     width: 100%;
@@ -45,7 +46,7 @@ a:hover {
       .transition(all @transition-time);
       width: 12.5%;
       height: 25%;
-      background-color: @grayDark;
+      background-color: @gray-dark;
 
       &.double {
         width: 25%;
@@ -62,15 +63,15 @@ a:hover {
       }
 
       &:hover {
-        background-color: @grayLight;
+        background-color: @gray-light;
         
         a {
-          color: @grayDark;
+          color: @gray-dark;
         }
       }
 
       a {
-        color: @grayLight;
+        color: @gray-light;
         font-family: @headings-font-family;
         font-size: 20px;
         text-decoration: none;
@@ -82,6 +83,10 @@ a:hover {
             display: block;
             font-size: 125px;
             margin-bottom: 15px;
+
+            &.small {
+              font-size: 100px;
+            }
           }
 
           .text-only { 
