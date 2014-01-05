@@ -4,9 +4,6 @@
  */
 
 html {
-  position: relative;
-  height: 100%;
-  margin: 0;
   background-color: @gray-dark;
 }
 
@@ -62,12 +59,19 @@ a:hover {
         }
       }
 
-      &:hover {
+      &:hover, &.hover {
         background-color: @gray-light;
+        border-collapse: collapse;
+        border-color: @gray-dark;
+        border: 2px solid @gray-dark;
         
         a {
-          color: @gray-dark;
+          color: @gray-dark !important;
         }
+      }
+
+      &.photo {
+        border: none;
       }
 
       a {
@@ -85,7 +89,7 @@ a:hover {
             margin-bottom: 15px;
 
             &.small {
-              font-size: 100px;
+              font-size: 95px;
             }
           }
 
