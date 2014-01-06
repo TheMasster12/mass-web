@@ -21,5 +21,8 @@ Now all you have to do is run `grunt`, and a server will be spun up which can be
 My `Gruntfile.coffee` has a `watch` task, so any code edits will trigger an instant recompile.
 
 ## Production
+Currently, the website is hosted at:
+[mass-beta.gigastormdevelopers.com](mass.gigastormdevelopers.com)
+
 When finished, this version of my website will be pushed to production at:
 [mass.gigastormdevelopers.com](mass.gigastormdevelopers.com)

@@ -9,16 +9,15 @@ fi
 
 scp -r ./dist/ ubuntu@gs-hq:~/
 
-ssh ubuntu@gs-hq << `EOF`
+ssh ubuntu@gs-hq << 'EOF'
 
-sudo su
-cd /home/apache/mass
-rm -rf /home/apache/mass/**
-cp -r /home/ubuntu/dist/** .
-exit
+  sudo su
+    cd /home/apache/mass-beta
+    rm -rf /home/apache/mass-beta/**
+    cp -r /home/ubuntu/dist/** .
+    exit
 
-rm -rf ~/dist
-
-exit
+  rm -rf ~/dist
+  exit
 
 EOF
