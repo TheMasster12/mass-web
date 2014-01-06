@@ -22,7 +22,7 @@ My `Gruntfile.coffee` has a `watch` task, so any code edits will trigger an inst
 
 ## Production
 Currently, the website is hosted at:
-[mass-beta.gigastormdevelopers.com](mass.gigastormdevelopers.com)
+[mass-beta.gigastormdevelopers.com](http://mass-beta.gigastormdevelopers.com)
 
 When finished, this version of my website will be pushed to production at:
-[mass.gigastormdevelopers.com](mass.gigastormdevelopers.com)
+[mass.gigastormdevelopers.com](http://mass.gigastormdevelopers.com)
