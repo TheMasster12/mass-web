@@ -5,10 +5,6 @@
 
 function MassWeb() {}
 
-MassWeb.socClicked = false;
-MassWeb.devClicked = false;
-MassWeb.expClicked = false;
-
 MassWeb.track = function(args) {
   _gaq.push(args); // MassWeb.track(['_trackEvent', 'Start', 'Start-Header']);
 };
@@ -21,7 +17,7 @@ MassWeb.verticalCenter = function() {
     $('.container').css('margin-top', margin);
   }
   else {
-    $('.container').css('margin-top', 10);
+    $('.container').css('margin-top');
   }
 };
 
@@ -34,8 +30,25 @@ MassWeb.highlightCategory = function(args) {
   }
 };
 
+MassWeb.toggleClick = function(args) {
+  var isClicked = $(args).hasClass('clicked');
+  $('.control').removeClass('clicked');
+  if(!isClicked) {
+    $(args).addClass('clicked');
+  }
+};
+
+MassWeb.toggleCategory = function(args) {
+  if($('#btn-' + args).hasClass('clicked')) {
+    this.highlightCategory('.' + args);
+  }
+  else {
+    this.highlightCategory('');
+  }
+};
+
 MassWeb.anyClicked = function() {
-  return (this.socClicked || this.devClicked || this.expClicked);
+  return $('.control').hasClass('clicked');
 }
 
 $(function() {
@@ -46,8 +59,8 @@ $(function() {
   });
 
   $('#btn-soc').click(function() {
-    MassWeb.highlightCategory('.soc');
-    MassWeb.socClicked = !MassWeb.socClicked;
+    MassWeb.toggleClick(this);
+    MassWeb.toggleCategory('soc');
   });
 
   $('#btn-soc').hover(function() {
@@ -61,8 +74,8 @@ $(function() {
   });
 
   $('#btn-dev').click(function() {
-    MassWeb.highlightCategory('.dev');
-    MassWeb.devClicked = !MassWeb.devClicked;
+    MassWeb.toggleClick(this);
+    MassWeb.toggleCategory('dev');
   });
 
   $('#btn-dev').hover(function() {
@@ -76,8 +89,8 @@ $(function() {
   });
 
   $('#btn-exp').click(function() {
-    MassWeb.highlightCategory('.exp');
-    MassWeb.expClicked = !MassWeb.expClicked;
+    MassWeb.toggleClick(this);
+    MassWeb.toggleCategory('exp');
   });
 
   $('#btn-exp').hover(function() {
@@ -88,12 +101,5 @@ $(function() {
     if(!MassWeb.anyClicked()) {
       MassWeb.highlightCategory('');
     }
-  });
-
-  $('#btn-clear').click(function() {
-    MassWeb.highlightCategory('');
-    MassWeb.socClicked = false;
-    MassWeb.devClicked = false;
-    MassWeb.expClicked = false;
   });
 });

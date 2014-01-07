@@ -6,7 +6,9 @@
 > Complete redesign of my personal website.
 
 ## Design
-The design is based on a grid system. Some have said that it looks similiar to the Windows Metro interface, but I think it has more in common with a chess board.
+The design is ~~far from complete~~ based on a grid system. Some have said that it looks similiar to the Windows Metro interface, but I think it has more in common with a chess board.
+
+Note: The design is currently only optimzed for 1080p screens, this will be fixed in the future.
 
 ## Building
 First, install [Node.js](http://nodejs.org).

@@ -17,84 +17,93 @@ html {
   background-color: @gray-light;
 }
 
-#profile-photo {
-  max-width: 100%;
-  height: 100%;
-  margin-top: 4px;
-  margin-left: 1px;
-}
-
 a:hover {
   text-decoration: none;
 }
 
+.header {
+  margin-bottom: 25px;
+  border-bottom: 2px solid @accent;
+  
+  h1 {
+    margin-left: 10px;
+    margin-bottom: 0;
+    font-size: 50px;
+    color: @gray-light;
+    
+    .control {
+      display: inline;
+      margin-left: 10px;
+      margin-right: 10px;
+      font-size: 25px;
+      cursor: pointer;
+
+      &:hover, &.clicked {
+        color: @accent;
+      }
+    }
+  }
+}
+
 .container {
-  width: 1600px;
-  height: 800px;
+  width: @table-width;
   margin: 0 auto;
-  background-color: @gray-light;
 
   table {
     width: 100%;
-    height: 100%;
+    height: @table-height;
 
-    td {
-      position: relative;
-      .transition(all @transition-time);
-      width: 12.5%;
-      height: 25%;
-      background-color: @gray-dark;
+    tr {
+      height: @table-height / 4;
 
-      &.double {
-        width: 25%;
-        height: 50%;
+      td {
+        .transition(all @transition-time);
+        width: 12.5%;
+        background-color: @gray-dark;
 
-        a {
-          font-size: 40px;
+        &.double {
+          width: 25%;
 
-          .box i {
-            font-size: 250px;
-            margin-bottom: 15px;
-          }
-        }
-      }
+          a {
+            font-size: 40px;
 
-      &:hover, &.hover {
-        background-color: @gray-light;
-        border-collapse: collapse;
-        border-color: @gray-dark;
-        border: 2px solid @gray-dark;
-        
-        a {
-          color: @gray-dark !important;
-        }
-      }
-
-      &.photo {
-        border: none;
-      }
-
-      a {
-        color: @gray-light;
-        font-family: @headings-font-family;
-        font-size: 20px;
-        text-decoration: none;
-
-        .box {
-          text-align: center;
-
-          i {
-            display: block;
-            font-size: 125px;
-            margin-bottom: 15px;
-
-            &.small {
-              font-size: 95px;
+            .box i {
+              font-size: 250px;
+              margin-bottom: 15px;
             }
           }
+        }
 
-          .text-only { 
-            font-size: 50px;
+        &:hover, &.hover {
+          background-color: @gray-light;
+          
+          a {
+            color: @gray-dark !important;
+          }
+        }
+
+        a {
+          font-size: 20px;
+          font-family: @headings-font-family;
+          color: @gray-light;
+          text-decoration: none;
+          
+          .box {
+            text-align: center;
+
+            i {
+              display: block;
+              margin-bottom: 15px;
+              font-size: 125px;
+              
+              &.small {
+                font-size: 95px;
+              }
+            }
+
+            .text-only { 
+              font-size: 50px;
+            }
           }
         }
       }
