@@ -1,5 +1,6 @@
 # mass-web
 
+[![Build Status](https://travis-ci.org/TheMasster12/mass-web.png?branch=master)](https://travis-ci.org/TheMasster12/mass-web)
 [![Depenency Status](https://gemnasium.com/TheMasster12/mass-web.png)](https://gemnasium.com/TheMasster12/mass-web)
 ![GA Beacon](https://ga-beacon.appspot.com/UA-43696434-2/mass-web/readme)
 
