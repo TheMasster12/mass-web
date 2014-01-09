@@ -11,6 +11,7 @@ deploy:
   secret_access_key:
     secure: Q6n0axY8+IeDC2n4lAregD397twi3v9DcqnENvnxkYZKgiZOjAUv6iDUAGwL1w2DkEcZSIQHiB9/saR9u4PDd4zCnLwvXsJ3DoN69soKEP2hS0zvLs8JXjlOkhOGJv4k/LxwfpLKNBHw+r8nE3JfaZHflFLOdumlrsmOs7kg2Mc=
   bucket: mass-beta.gigastormdevelopers.com
+  skip_cleanup: true
   local-dir: dist
   on:
     repo: TheMasster12/mass-web
