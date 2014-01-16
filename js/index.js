@@ -10,9 +10,9 @@ MassWeb.track = function(args) {
 };
 
 MassWeb.verticalCenter = function() {
-  var containerHeight = $('.container').outerHeight();
+  var outerHeight = $('.container').outerHeight() + $('table').outerHeight();
   var screenHeight = $(window).innerHeight();
-  var margin = (screenHeight - containerHeight) / 2;
+  var margin = (screenHeight - outerHeight) / 2;
   if(margin >= 0) {
     $('.container').css('margin-top', margin);
   }

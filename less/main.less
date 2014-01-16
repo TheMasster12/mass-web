@@ -47,89 +47,89 @@ a:hover {
 }
 
 .container {
-  width: 90%;
+  max-width: 1650px;
+  margin: 0 auto;
+}
+
+table {
+  width: @table-width;
+  height: @table-height;
   margin: 0 auto;
 
-  table {
-    width: @table-width;
-    height: @table-height;
-    margin: 0 auto;
+  tr {
+    height: @table-height / 4;
 
-    tr {
-      height: @table-height / 4;
+    td {
+      .transition(background-color @transition);
+      width: 100% / 6;
+      background-color: @gray-dark;
 
-      td {
-        .transition(background-color @transition);
-        width: 100% / 6;
-        background-color: @gray-dark;
+      a {
+        .transition(color @transition);
+        font-size: 20px;
+        font-family: @headings-font-family;
+        color: @gray-light;
+        text-decoration: none;
+        
+        .box {
+          text-align: center;
+
+          i {
+            display: block;
+            margin-bottom: 15px;
+            font-size: 125px;
+            
+            &.small {
+              font-size: 95px;
+              margin-top: 10px;
+              margin-bottom: 35px;
+            }
+          }
+
+          img {
+            width: 125px;
+            margin-bottom: 10px;
+          }
+
+          .text-only { 
+            font-size: 50px;
+          }
+        }
+      }
+
+      &.double {
+        width: 100% / 3;
 
         a {
-          .transition(color @transition);
-          font-size: 20px;
-          font-family: @headings-font-family;
-          color: @gray-light;
-          text-decoration: none;
-          
+          font-size: 40px;
+
           .box {
-            text-align: center;
 
             i {
-              display: block;
-              margin-bottom: 15px;
-              font-size: 125px;
-              
-              &.small {
-                font-size: 95px;
-                margin-top: 10px;
-                margin-bottom: 35px;
-              }
+              font-size: 250px;
             }
 
             img {
-              width: 125px;
-              margin-bottom: 10px;
-            }
-
-            .text-only { 
-              font-size: 50px;
+              width: 225px;
+              margin-top: 15px;
+              margin-bottom: 20px;
             }
           }
         }
+      }
 
-        &.double {
-          width: 100% / 3;
+      &:hover, &.hover {
+        background-color: @gray-light;
+        -moz-box-shadow: inset 0 0 4px 4px @accent;
+        -webkit-box-shadow: inset 0 0 4px 4px @accent;
+        box-shadow: inset 0 0 4px 4px @accent;
+        
+        a {
+          color: @gray-dark;
 
-          a {
-            font-size: 40px;
-
-            .box {
-
-              i {
-                font-size: 250px;
-              }
-
-              img {
-                width: 225px;
-                margin-top: 15px;
-                margin-bottom: 20px;
-              }
-            }
-          }
-        }
-
-        &:hover, &.hover {
-          background-color: @gray-light;
-          -moz-box-shadow: inset 0 0 4px 4px @accent;
-          -webkit-box-shadow: inset 0 0 4px 4px @accent;
-          box-shadow: inset 0 0 4px 4px @accent;
-          
-          a {
-            color: @gray-dark;
-
-            img {
-              -webkit-filter: invert(100%);
-              -webkit-transition: @transition;
-            }
+          img {
+            -webkit-filter: invert(100%);
+            -webkit-transition: @transition;
           }
         }
       }
@@ -137,12 +137,158 @@ a:hover {
   }
 }
 
-@media only screen and (min-width: 480px) {}
+@media only screen and (max-width: 825px) {
+  .header h1 {
+    font-size: 30px;
 
-@media only screen and (min-width: 768px) {}
+    .control {
+      font-size: 15px;
+    }
+  }
 
-@media only screen and (min-width: 992px) {}
+  table {
+    width: @table-width * 0.33;
+    height: @table-height * 0.33;
 
-@media only screen and (min-width: 1200px) {}
+    tr {
+      height: @table-height / 4 * 0.33;
 
-@media only screen and (min-width: 1600px) {}
+      td {
+
+        a .box {
+          font-size: 10px;
+
+          i {
+            font-size: 40px;
+
+            &.small {
+              font-size: 30px;
+            }
+          }
+
+          img {
+            width: 40px;
+          }
+        }
+
+        &.double a .box {
+          font-size: 18px;
+
+          i {
+            font-size: 100px;
+          }
+
+          img {
+            width: 100px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 826px) and (max-width: 1225px) {
+  .header h1 {
+    font-size: 35px;
+
+    .control {
+      font-size: 18px;
+    }
+  }
+
+  table {
+    width: @table-width * 0.5;
+    height: @table-height * 0.5;
+
+    tr {
+      height: @table-height / 4 * 0.5;
+
+      td {
+
+        a .box {
+          font-size: 14px;
+
+          i {
+            font-size: 60px;
+
+            &.small {
+              font-size: 50px;
+            }
+          }
+
+          img {
+            width: 60px;
+          }
+        }
+
+        &.double a .box {
+          font-size: 25px;
+
+          i {
+            font-size: 160px;
+          }
+
+          img {
+            width: 160px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1226px) and (max-width: 1625px) {
+  .header h1 {
+    font-size: 40px;
+
+    .control {
+      font-size: 20px;
+    }
+  }
+
+  table {
+    width: @table-width * 0.75;
+    height: @table-height * 0.75;
+
+    tr {
+      height: @table-height / 4 * 0.75;
+
+      td {
+
+        a .box {
+          font-size: 15px;
+
+          i {
+            font-size: 100px;
+
+            &.small {
+              font-size: 80px;
+            }
+          }
+
+          img {
+            width: 100px;
+          }
+        }
+
+        &.double a .box {
+          font-size: 30px;
+
+          i {
+            font-size: 200px;
+          }
+
+          img {
+            width: 200px;
+          }
+        }
+      }
+    } 
+  }
+}
+
+@media only screen and (max-width: 1750px) {
+  .container {
+    width: 90%;
+  }
+}
