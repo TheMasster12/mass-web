@@ -3,9 +3,7 @@
 > Complete redesign of my personal website.
 
 ## Design
-The design is ~~far from complete~~ based on a grid system. Some have said that it looks similiar to the Windows Metro interface, but I think it has more in common with a chess board.
-
-Note: The design is currently only optimzed for 1080p screens, this will be fixed in the future.
+The design is ~~lacking in artistic value~~ based on a grid system. Some have said that it looks similiar to the Windows Metro interface, but I think it has more in common with a chess board.
 
 ## Building
 First, install [Node.js](http://nodejs.org).
@@ -25,8 +23,4 @@ If you want to build and package to prepare for deployment, run `grunt prod`.
 This project is configured to build and deploy after each commit through the use of [Travis-CI](https://travis-ci.org). After a successfully running `grunt prod`, Travis-CI deploys the `dist` folder to a S3 bucket on AWS.
 
 ## Production
-Currently, the website is hosted at:
-[mass-beta.gigastormdevelopers.com](http://mass-beta.gigastormdevelopers.com)
-
-When finished, this version of my website will be pushed to production at:
-[mass.gigastormdevelopers.com](http://mass.gigastormdevelopers.com)
+The website is hosted at: [mass.gigastormdevelopers.com](http://mass.gigastormdevelopers.com)
