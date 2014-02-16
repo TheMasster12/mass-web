@@ -1,4 +1,4 @@
-# mass-web [![Build Status](https://travis-ci.org/mass/mass-web.png?branch=master)](https://travis-ci.org/mass/mass-web) [![Depenency Status](https://gemnasium.com/mass/mass-web.png)](https://gemnasium.com/mass/mass-web) ![GA Beacon](https://ga-beacon.appspot.com/UA-43696434-2/mass-web/readme)
+# mass-web [![Build Status](https://travis-ci.org/mass/mass-web.png?branch=master)](https://travis-ci.org/mass/mass-web) [![devDependency Status](https://david-dm.org/mass/mass-web/dev-status.png)](https://david-dm.org/mass/mass-web#info=devDependencies) ![GA Beacon](https://ga-beacon.appspot.com/UA-43696434-2/mass-web/readme)
 
 > Complete redesign of my personal website.
 
