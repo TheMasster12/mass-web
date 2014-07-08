@@ -1,4 +1,5 @@
-# mass-web [![Build Status](https://travis-ci.org/mass/mass-web.png?branch=master)](https://travis-ci.org/mass/mass-web) [![devDependency Status](https://david-dm.org/mass/mass-web/dev-status.png)](https://david-dm.org/mass/mass-web#info=devDependencies) ![GA Beacon](https://ga-beacon.appspot.com/UA-43696434-2/mass-web/readme)
+# mass-web [![BuildStatus](http://img.shields.io/travis/mass/mass-web.svg?style=flat)](https://travis-ci.org/mass/mass-web) [![devDependencyStatus](http://img.shields.io/david/dev/mass/mass-web.svg?style=flat)](https://david-dm.org/mass/mass-web#info=devDependencies) [![Issues](http://img.shields.io/github/issues/mass/mass-web.svg?style=flat)](https://github.com/mass/mass-web/issues) [![GaBeacon](http://img.shields.io/badge/analytics-GA-blue.svg?style=flat)](https://ga-beacon.appspot.com/UA-43696434-2/mass-web/readme)
+
 
 > Complete redesign of my personal website.
 
