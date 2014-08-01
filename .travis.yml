@@ -1,3 +1,6 @@
+language: node_js
+node_js: "0.10"
+
 before_script:
   - npm install -g grunt-cli
   - npm install
@@ -10,7 +13,7 @@ deploy:
   access_key_id: AKIAJL6AVUXGTC63ZZ7A
   secret_access_key:
     secure: Q6n0axY8+IeDC2n4lAregD397twi3v9DcqnENvnxkYZKgiZOjAUv6iDUAGwL1w2DkEcZSIQHiB9/saR9u4PDd4zCnLwvXsJ3DoN69soKEP2hS0zvLs8JXjlOkhOGJv4k/LxwfpLKNBHw+r8nE3JfaZHflFLOdumlrsmOs7kg2Mc=
-  bucket: mass.gigastormdevelopers.com
+  bucket: mass.red
   skip_cleanup: true
   local-dir: dist
   on:

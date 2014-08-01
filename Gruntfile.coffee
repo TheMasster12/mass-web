@@ -28,7 +28,8 @@ module.exports = (grunt) ->
     copy:
       all:
         files: [{expand: true, src: ['img/*'], dest: 'dist/', filter: 'isFile'},
-                {expand: true, src: ['fonts/*'], dest: 'dist/', filter: 'isFile'}]
+                {expand: true, src: ['fonts/*'], dest: 'dist/', filter: 'isFile'},
+                {expand: false, src: 'favicon.ico', dest: 'dist/', filter: 'isFile'}]
 
     clean:
       res: ["dist/font", "dist/img"]
