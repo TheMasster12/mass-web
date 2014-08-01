@@ -11,13 +11,17 @@
 // Dimensions
 @table-width: 1600px;
 @table-height: 800px;
+@font-size-h1: 60px;
 
 // Timings
 @transition: 0.1s linear;
 
 // Fonts
-@sans-font-family: 'Roboto', 'Helvetica Neue', sans-serif;
-@headings-font-family: 'Oswald', @sans-font-family;
+@font-family-sans-serif:  'Helvetica Neue', Helvetica, Arial, sans-serif;
+@font-family-serif:       Georgia, "Times New Roman", Times, serif;
+@font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
+@font-family-base:        @font-family-sans-serif;
+@font-family-headings:    'Roboto', @font-family-sans-serif;
 
 // Mixins
 .transition(@trans) {
