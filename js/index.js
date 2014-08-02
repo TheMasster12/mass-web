@@ -9,18 +9,6 @@ MassWeb.track = function(args) {
   _gaq.push(args); // MassWeb.track(['_trackEvent', 'Start', 'Start-Header']);
 };
 
-MassWeb.verticalCenter = function() {
-  var outerHeight = $('.container').outerHeight() + $('table').outerHeight();
-  var screenHeight = $(window).innerHeight();
-  var margin = (screenHeight - outerHeight) / 2;
-  if(margin >= 0) {
-    $('.container').css('margin-top', margin);
-  }
-  else {
-    $('.container').css('margin-top');
-  }
-};
-
 MassWeb.highlightCategory = function(args) {
   if(args === '') {
     $('.cell').removeClass('hover');
@@ -49,14 +37,9 @@ MassWeb.toggleCategory = function(args) {
 
 MassWeb.anyClicked = function() {
   return $('.control').hasClass('clicked');
-}
+};
 
 $(function() {
-  MassWeb.verticalCenter();
-
-  $(window).resize(function() {
-    MassWeb.verticalCenter();
-  });
 
   $('#btn-soc').click(function() {
     MassWeb.toggleClick(this);
