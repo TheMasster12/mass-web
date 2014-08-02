@@ -23,10 +23,10 @@ MassWeb.verticalCenter = function() {
 
 MassWeb.highlightCategory = function(args) {
   if(args === '') {
-    $('td').removeClass('hover');
+    $('.cell').removeClass('hover');
   } else {
-    $('td').removeClass('hover');
-    $('td' + args).addClass('hover');
+    $('.cell').removeClass('hover');
+    $('.cell' + args).addClass('hover');
   }
 };
 
@@ -65,7 +65,7 @@ $(function() {
 
   $('#btn-soc').hover(function() {
     if(!MassWeb.anyClicked()) {
-      MassWeb.highlightCategory('.soc'); 
+      MassWeb.highlightCategory('.soc');
     }
   }, function() {
     if(!MassWeb.anyClicked()) {
@@ -80,7 +80,7 @@ $(function() {
 
   $('#btn-dev').hover(function() {
     if(!MassWeb.anyClicked()) {
-      MassWeb.highlightCategory('.dev'); 
+      MassWeb.highlightCategory('.dev');
     }
   }, function() {
     if(!MassWeb.anyClicked()) {
@@ -95,7 +95,7 @@ $(function() {
 
   $('#btn-exp').hover(function() {
     if(!MassWeb.anyClicked()) {
-      MassWeb.highlightCategory('.exp'); 
+      MassWeb.highlightCategory('.exp');
     }
   }, function() {
     if(!MassWeb.anyClicked()) {
