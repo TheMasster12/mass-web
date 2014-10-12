@@ -10,7 +10,12 @@ module.exports = (grunt) ->
           compress: true
           cleancss: true
         files:
-          'dist/style.css': 'less/style.less'
+          'compiled.css': 'less/style.less'
+
+    autoprefixer:
+      all:
+        src: 'compiled.css'
+        dest: 'dist/style.css'
 
     uglify:
       all:
@@ -28,10 +33,12 @@ module.exports = (grunt) ->
     copy:
       all:
         files: [{expand: true, src: ['img/*'], dest: 'dist/', filter: 'isFile'},
-                {expand: true, src: ['fonts/*'], dest: 'dist/', filter: 'isFile'}]
+                {expand: true, src: ['fonts/*'], dest: 'dist/', filter: 'isFile'},
+                {expand: false, src: 'favicon.ico', dest: 'dist/', filter: 'isFile'}]
 
     clean:
       res: ["dist/font", "dist/img"]
+      css: 'compiled.css'
 
     connect:
       all:
@@ -42,7 +49,7 @@ module.exports = (grunt) ->
     watch:
       less:
         files: ['less/*.less']
-        tasks: ['less:all']
+        tasks: ['less:all', 'autoprefixer:all', 'clean:css']
       concat:
         files: ['js/index.js']
         tasks: ['uglify:all']
@@ -60,6 +67,7 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-clean'
   grunt.loadNpmTasks 'grunt-contrib-watch'
   grunt.loadNpmTasks 'grunt-contrib-connect'
+  grunt.loadNpmTasks 'grunt-autoprefixer'
 
-  grunt.registerTask 'prod', ['less', 'uglify', 'htmlmin', 'copy']
+  grunt.registerTask 'prod', ['less', 'autoprefixer', 'clean:css', 'uglify', 'htmlmin', 'copy']
   grunt.registerTask 'default', ['prod', 'connect', 'watch']

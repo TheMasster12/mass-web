@@ -1,15 +1,15 @@
 {
   "name": "mass-web",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Personal website for Andrew Mass.",
   "author": {
     "name": "Andrew Mass",
     "email": "amass1212@gmail.com",
-    "url": "http://mass.gigastormdevelopers.com"
+    "url": "http://mass.red"
   },
-  "homepage": "http://mass.gigastormdevelopers.com",
+  "homepage": "http://mass.red",
   "license": "MIT",
-  "private": false,
+  "private": true,
   "repository": {
     "type": "git",
     "url": "http://github.com/mass/mass-web.git"
@@ -19,13 +19,14 @@
     "email": "amass1212@gmail.com"
   },
   "devDependencies": {
-    "grunt": "0.4.4",
-    "grunt-contrib-watch": "0.6.1",
-    "grunt-contrib-less": "0.11.0",
-    "grunt-contrib-uglify": "0.4.0",
-    "grunt-contrib-htmlmin": "0.2.0",
-    "grunt-contrib-copy": "0.5.0",
-    "grunt-contrib-clean": "0.5.0",
-    "grunt-contrib-connect": "0.7.1"
+    "grunt": "~0.4.5",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-contrib-less": "~0.11.4",
+    "grunt-contrib-uglify": "~0.5.1",
+    "grunt-contrib-htmlmin": "~0.3.0",
+    "grunt-contrib-copy": "~0.5.0",
+    "grunt-contrib-clean": "~0.6.0",
+    "grunt-contrib-connect": "~0.8.0",
+    "grunt-autoprefixer": "~1.0.0"
   }
 }
